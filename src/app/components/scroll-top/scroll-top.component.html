@@ -1,0 +1,10 @@
+<button
+        class="scrolltop"
+        *ngIf="show"
+        [class.hide]="nearFooter"
+        (click)="toTop()"
+        aria-label="Scroll to top"
+        title="Back to top"
+>
+        <i class="fas fa-arrow-up"></i>
+</button>

@@ -1,0 +1,265 @@
+/* =========================
+   PAGE BASE
+========================= */
+:host, .contact-wrap {
+  display: block;
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: radial-gradient(circle at top left, #0a0a0a 0%, #000 100%);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+.glass-card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 30px 26px 40px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  text-align: center;
+  border: 2px solid #fff
+}
+
+@supports not ((backdrop-filter: blur(1px))) {
+  .glass-card {
+    background: rgba(20, 20, 20, 0.95);
+  }
+}
+
+/* =========================
+   HEADINGS & TEXT
+========================= */
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.tagline {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 26px;
+}
+
+/* =========================
+   FORM FIELDS
+========================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 14px 1px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  outline: none;
+  font-size: 15px;
+  transition: border 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 100px;
+  background: transparent;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+  padding: 14px;
+}
+
+.field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='16' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M4 6l4 4 4-4z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border: 1px solid rgba(120, 180, 255, 0.9);
+  box-shadow: 0 0 0 4px rgba(120, 180, 255, 0.15), 0 10px 30px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* =========================
+   BUTTON (Request Quote)
+========================= */
+.btn-send {
+  position: relative;
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #6aa8ff 0%, #7b5cff 45%, #ff5ea8 100%);
+  box-shadow: 0 10px 30px rgba(123, 92, 255, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.btn-send:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 36px rgba(123, 92, 255, 0.45);
+}
+
+.btn-send .plane {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  opacity: 0.9;
+  transition: transform 0.25s ease;
+}
+
+.btn-send:hover .plane {
+  transform: translateY(-2px) translateX(2px) rotate(-6deg);
+}
+
+/* =========================
+   ACTION CHIPS
+========================= */
+.alt-actions {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.06);
+  transition: transform 0.12s ease, box-shadow 0.2s ease, background 0.2s ease, border 0.2s ease;
+}
+
+.chip svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  opacity: 0.9;
+}
+
+.chip:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+}
+
+.chip-whatsapp {
+  border-color: rgba(86, 196, 101, 0.55);
+}
+
+.chip-whatsapp:hover {
+  box-shadow: 0 10px 22px rgba(86, 196, 101, 0.25);
+}
+
+.chip-email {
+  border-color: rgba(120, 180, 255, 0.5);
+}
+
+.chip-email:hover {
+  box-shadow: 0 10px 22px rgba(120, 180, 255, 0.25);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .glass-card {
+    padding: 24px 18px 32px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .btn-send {
+    font-size: 15px;
+  }
+}
+
+/* =========================
+   PROJECT TYPE DROPDOWN
+========================= */
+
+/* Container wrapper */
+.field select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: border 0.2s ease, box-shadow 0.25s ease, background 0.2s ease;
+  font-family: inherit;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  
+  /* ▼ Custom dropdown arrow */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='16' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M4 6l4 4 4-4z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+}
+
+/* Placeholder color */
+.field select option[value=""] {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Options dropdown (browser dependent) */
+.field select option {
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px;
+}
+
+/* Hover/focus effect */
+.field select:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.field select:focus {
+  border: 1px solid rgba(120, 180, 255, 0.9);
+  box-shadow: 0 0 0 4px rgba(120, 180, 255, 0.15), 0 10px 30px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+}
