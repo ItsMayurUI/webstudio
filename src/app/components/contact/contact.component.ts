@@ -18,7 +18,7 @@ export class ContactComponent implements OnInit {
 
   // ✅ WhatsApp & Email configuration
   myWhatsApp = '919356219205'; // Your WhatsApp number (country code + number, no +)
-  myEmail = 'mayurnirkhe.dev@gmail.com';
+  myEmail = 'studio@mayurnirkhe.inp';
 
   // ✅ Form data model
   formData: ContactFormData = {
