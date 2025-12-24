@@ -92,3 +92,169 @@
       background-color: black;
   }
 }
+.site-header {
+  position: sticky;
+  top: 16px;
+  margin: 16px;
+  padding: 14px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 18px;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+--------------
+.brand img {
+  height: 46px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.brand img:hover {
+  transform: scale(1.05);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #1f2937;
+  position: relative;
+  padding: 6px 0;
+}
+
+/* Hover underline */
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(135deg, #4f7cff, #a78bfa);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* Active route */
+.main-nav a.active {
+  font-weight: 600;
+  color: #4f7cff;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 260px;
+
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(18px);
+
+    padding: 80px 30px;
+    transition: right 0.35s ease;
+    z-index: 1100;
+  }
+
+  .main-nav.open {
+    right: 0;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .main-nav a {
+    font-size: 18px;
+  }
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+}
+
+/* Active route glow pill */
+.main-nav a.active {
+  background: linear-gradient(135deg, #4f7cff, #a78bfa);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(79,124,255,0.45);
+}
+
+/* Hide / Show on scroll */
+.site-header {
+  transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.site-header.hide {
+  transform: translateY(-120%);
+}
+
+/* Dark glass on scroll */
+.site-header.scrolled {
+  background: rgba(20, 20, 35, 0.55);
+  backdrop-filter: blur(18px);
+}
+
+.site-header.scrolled a {
+  color: #f9fafb;
+}
+
+.site-header.scrolled .hamburger span {
+  background: #f9fafb;
+}
+
+/* Gradient glow on logo */
+.brand img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 30px rgba(79,124,255,0.6);
+}

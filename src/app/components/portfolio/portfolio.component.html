@@ -1,31 +1,21 @@
 <section>
-      <h2>Portfolio</h2>
-      <!-- <p>Here Are Some of My Recent Projects</p> -->
+  <h2>Portfolio</h2>
 
-      <div class="portfolio-container">
-          <!-- Project 1 -->
-          <div class="project-card">
-            <img src="assets/projects/shop-website.png" alt="Shop Website">
-            <h3>Shop Website</h3>
-            <p>Responsive Website For a Local Electronics & Appliance Shop.</p>
-            <a href="https://yourliveprojectlink.com" target="_blank" class="btn primary">🔗 View Project</a>
-          </div>
+  <div class="portfolio-container">
+    <div class="project-card" *ngFor="let project of projects">
+      
+      <img [src]="project.image" [alt]="project.title">
 
-          <!-- Project 2 -->
-          <div class="project-card">
-            <img src="assets/projects/portfolio.png" alt="Portfolio Website">
-            <h3>Personal Portfolio</h3>
-            <p> Clean & Minimal Black/White Portfolio to Showcase My Work.</p>
-            <a href="https://yourliveprojectlink.com" target="_blank" class="btn primary">🔗 View Project</a>
-          </div>
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.desc }}</p>
 
-          <!-- Project 3 -->
-          <div class="project-card">
-            <img src="assets/projects/ecommerce.png" alt="E-Commerce Website">
-            <h3>E-Commerce Website</h3>
-            <p>Online Store With Product Catalog, Cart, and Checkout System.</p>
-            <a href="https://yourliveprojectlink.com" target="_blank" class="btn primary">🔗 View Project</a>
-          </div>
-      </div>
+      <a
+        [href]="project.link"
+        target="_blank"
+        class="btn primary"
+      >
+        🔗 View Project
+      </a>
+    </div>
+  </div>
 </section>
-

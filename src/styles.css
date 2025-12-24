@@ -1,3 +1,36 @@
+/* ===== Frozen Doodle Background ===== */
+body {
+  position: relative;
+  background: #f8f9ff; /* ice-cream base */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url('assets/illustrations/body/bg2.jpg');
+  background-repeat: repeat;
+  background-size: 420px;
+  background-position: center;
+
+  opacity: 0.08; /* very important */
+  pointer-events: none;
+  z-index: -1;
+}
+
+.site-header,
+.hero-glass,
+.service-card,
+.project-card,
+.about-glass {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* ------------------ */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -58,3 +91,5 @@ main { flex: 1 0 auto; }      /* wrap your page content in <main> */
 app-footer { margin-top: auto; }
 
 html { scroll-behavior: smooth; }
+
+

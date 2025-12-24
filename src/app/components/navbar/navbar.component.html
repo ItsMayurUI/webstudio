@@ -1,7 +1,11 @@
-<header class="site-header">
+<header class="site-header"
+        class="site-header"
+        [class.hide]="isHidden"
+        [class.scrolled]="isScrolled">
+        
   <!-- Logo -->
   <a class="brand" routerLink="/">
-    <img src="assets/Logo/LogoDevstudio.jpg" alt="Mayur Nirkhe Studio" />
+    <img src="assets/Logo/LogoDevstudio.png" alt="Mayur Nirkhe Studio" />
   </a>
 
   <!-- Hamburger (mobile only) -->
@@ -23,3 +27,4 @@
   <!-- Changes Blur / dim overlay -->
   <div class="nav-overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
 </header>
+

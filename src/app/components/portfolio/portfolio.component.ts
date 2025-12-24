@@ -1,3 +1,19 @@
+// import { Component, OnInit } from '@angular/core';
+
+// @Component({
+//   selector: 'app-portfolio',
+//   templateUrl: './portfolio.component.html',
+//   styleUrls: ['./portfolio.component.css']
+// })
+// export class PortfolioComponent implements OnInit {
+
+//   constructor() { }
+
+//   ngOnInit(): void {
+//   }
+
+// }
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +23,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  projects = [
+    {
+      title: 'Sadguru Constructions',
+      desc: 'Responsive Website For a Builder who delivering quality home.',
+      image: 'assets/projects/sadguru/homepage.png',
+      link: 'https://singular-cocada-303140.netlify.app/'
+    },
+    {
+      title: 'Personal Portfolio',
+      desc: 'Clean & Minimal Black/White Portfolio to Showcase My Work.',
+      image: 'assets/projects/portfolio.png',
+      link: 'https://yourliveprojectlink.com'
+    },
+    {
+      title: 'E-Commerce Website',
+      desc: 'Online Store With Product Catalog, Cart, and Checkout System.',
+      image: 'assets/projects/ecommerce.png',
+      link: 'https://yourliveprojectlink.com'
+    }
+  ];
 
-  ngOnInit(): void {
-  }
+  constructor() {}
+
+  ngOnInit(): void {}
 
 }

@@ -1,3 +1,36 @@
+<!-- HERO HTML -->
+ <section class="hero-section">
+  <div class="hero-glass">
+
+    <!-- Left Content -->
+    <div class="hero-text">
+      <h1>
+        Hi, I’m <span>Mayur</span> 👋 <br />
+        I Design & Build <br />
+        Modern Websites
+      </h1>
+
+      <p>
+        I’m a solo Angular & Full-Stack Developer.  
+        I personally handle design, development & deployment
+        for every project.
+      </p>
+
+      <div class="hero-actions">
+        <a routerLink="/portfolio" class="btn primary">View My Work</a>
+        <a routerLink="/contact" class="btn secondary">Hire Me</a>
+      </div>
+    </div>
+
+    <!-- Right Illustration -->
+    <div class="hero-visual">
+      <img src="assets/illustrations/image6.jpg" alt="Web Developer Illustration">
+    </div>
+
+  </div>
+</section>
+
+
 <!-- PROMO BANNER -->
 <section class="promo-banner" style="--bg:url('assets/hero-agency.webp')">
   <div class="promo-inner">
@@ -7,13 +40,13 @@
           We Meticulously Build Your Website So Every Detail Matches Your Vision.
         </p>
 
-        <!-- <a routerLink="/contact" class="btn promo-cta">CONTACT US</a> -->
+        <a routerLink="/contact" class="btn promo-cta">CONTACT US</a>
 
-        <!-- <div class="promo-meta">
-          <span>+91 98765 43210</span>
-          <span>hello@mayurnirkhe.dev</span>
-          <span>mayurnirkhe.dev</span>
-        </div> -->
+        <div class="promo-meta">
+          <span>+91 9356219205</span>
+          <span>studio@mayurnirkhe.in</span>
+          <span>mayurnirkhe.in</span>
+        </div>
   </div>
 </section>
 
@@ -42,11 +75,11 @@
 
     <div class="hero-col media">
           <!-- Replace with a clean mockup or brand image -->
-          <img src="/assets/Homepage/hppromo.jpeg" alt="Website mockup preview" />
+          <img src="/assets/illustrations/image_11.png" alt="Website mockup preview" />
     </div>
 </section>
 
-<section class="section services">
+<!-- <section class="section services">
         <h2 class="section-title">Services</h2>
         <p class="section-sub">Everything You Need to go From Idea to Launch.</p>
 
@@ -69,20 +102,76 @@
                 Perfect for Freelancers, Creators, and Business Owners Who Want to Showcase Their Projects, Skills and Achievements with a Modern, Responsive Design That Looks Great on Every Device.</p>
         </article>
   </div>
+</section> -->
+
+<section class="services-section">
+  <h2>What I Do</h2>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Business Websites</h3>
+      <p>Fast, modern & SEO-friendly websites for businesses.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Portfolio Websites</h3>
+      <p>Personal branding sites for developers & professionals.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Angular Web Apps</h3>
+      <p>Scalable Angular applications with clean architecture.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Website Redesign</h3>
+      <p>Upgrade old websites into modern UI/UX.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Deployment & Hosting</h3>
+      <p>Domain, hosting & production deployment handled.</p>
+    </div>
+  </div>
 </section>
 
+<!-- PORTFOLIO – PREMIUM PROJECT CARDS -->
+ <!-- <section class="portfolio-section">
+  <h2>My Work</h2>
+
+  <div class="portfolio-grid">
+    <div class="project-card">
+      <img src="assets/projects/shop.png" alt="Shop Website">
+      <h3>Websites</h3>
+      <p>Angular • Responsive • SEO Friendly</p>
+      <a href="#" target="_blank">View Live</a>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/projects/portfolio.png" alt="Portfolio Website">
+      <h3>Personal Portfolio</h3>
+      <p>Clean UI • Fast • Modern</p>
+      <a href="#" target="_blank">View Live</a>
+    </div>
+  </div>
+</section> -->
+
+
 <section class="section work">
-        <h2 class="section-title">Recent Work</h2>
+        <h2 class="section-title">My Work</h2>
         <p class="section-sub">A Quick Look At Projects Crafted With Care.</p>
 
   <div class="work-grid">
         <a routerLink="/portfolio" class="work-card">
-          <div class="thumb"></div>
+          <div class="thumb">
+            <img src="assets/projects/sadguru/homepage.png" alt="Retail Service Site">
+          </div>
           <div class="work-meta">
-            <h4>Retail Service Site</h4>
+            <h4>Sadguru Constructions</h4>
             <p>SEO-Friendly, Responsive Product Catalog</p>
           </div>
         </a>
+
         <a routerLink="/portfolio" class="work-card">
           <div class="thumb"></div>
           <div class="work-meta">
@@ -90,6 +179,7 @@
             <p>High-Converting Hero + CTA Flow</p>
           </div>
         </a>
+
         <a routerLink="/portfolio" class="work-card">
           <div class="thumb"></div>
           <div class="work-meta">
