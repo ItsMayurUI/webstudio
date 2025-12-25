@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +11,14 @@ export class NavbarComponent {
   isScrolled = false;
   isHidden = false;
   lastScrollY = 0;
+
+  constructor(private router: Router) {
+  this.router.events.subscribe(event => {
+    if (event instanceof NavigationEnd) {
+      this.menuOpen = false;
+    }
+  });
+}
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
