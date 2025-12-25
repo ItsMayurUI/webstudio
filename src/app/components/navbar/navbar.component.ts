@@ -1,6 +1,5 @@
 import { Component, HostListener } from '@angular/core';
 
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -8,19 +7,34 @@ import { Component, HostListener } from '@angular/core';
 })
 export class NavbarComponent {
   menuOpen = false;
-  isHidden = false;
   isScrolled = false;
+  isHidden = false;
   lastScrollY = 0;
-  toggleMenu() { this.menuOpen = !this.menuOpen; }
-  closeMenu() { this.menuOpen = false; }
 
-  @HostListener('window:scroll')
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+  }
+
+  @HostListener('window:scroll', [])
   onScroll() {
-    const y = window.scrollY;
+    const currentScrollY = window.scrollY;
+    const isMobile = window.innerWidth <= 768;
 
-    this.isHidden = y > this.lastScrollY && y > 80;
-    this.isScrolled = y > 40;
+    // shadow effect (all devices)
+    this.isScrolled = currentScrollY > 10;
 
-    this.lastScrollY = y;
+    // hide/show ONLY on mobile
+    if (isMobile) {
+      this.isHidden =
+        currentScrollY > this.lastScrollY && currentScrollY > 80;
+    } else {
+      this.isHidden = false;
+    }
+
+    this.lastScrollY = currentScrollY;
   }
 }

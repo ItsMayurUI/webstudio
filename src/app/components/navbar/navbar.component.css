@@ -68,7 +68,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: min(92vw, 520px);
-      background: rgba(241, 237, 237, 0.08);
+      background: rgba(248, 246, 246, 0.08);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 12px;
@@ -134,7 +134,7 @@
 .main-nav a {
   text-decoration: none;
   font-weight: 500;
-  color: #1f2937;
+  color: #eff2f5;
   position: relative;
   padding: 6px 0;
 }
@@ -258,3 +258,40 @@
   transform: scale(1.06);
   box-shadow: 0 0 30px rgba(79,124,255,0.6);
 }
+
+.navbar {
+  position: sticky;
+  top: env(safe-area-inset-top);
+  z-index: 1000;
+  -webkit-position: sticky; /* iOS Safari safety */
+
+  padding: 18px 24px; /* increase vertical padding */
+  margin-top: 8px;    /* 🔥 THIS fixes touching issue */
+  margin: 8px 12px 0;
+  border-radius: 18px;
+
+  background: transparent;
+
+  transition:
+    transform 0.35s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.navbar.hidden {
+  transform: translateY(-120%);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 18px;
+    border-radius: 14px; /* optional premium look */
+  }
+}
+
