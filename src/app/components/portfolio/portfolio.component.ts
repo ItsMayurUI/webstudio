@@ -33,13 +33,13 @@ export class PortfolioComponent implements OnInit {
     {
       title: 'Personal Portfolio',
       desc: 'Clean & Minimal Black/White Portfolio to Showcase My Work.',
-      image: 'assets/projects/portfolio.png',
-      link: 'https://yourliveprojectlink.com'
+      image: 'assets/Logo/LogoDevstudio.png',
+      link: 'https://mayurnirkhe.in/'
     },
     {
-      title: 'E-Commerce Website',
+      title: 'Interior Design and craft by SK',
       desc: 'Online Store With Product Catalog, Cart, and Checkout System.',
-      image: 'assets/projects/ecommerce.png',
+      image: 'assets/projects/kotecha/body/cover.png',
       link: 'https://yourliveprojectlink.com'
     }
   ];
