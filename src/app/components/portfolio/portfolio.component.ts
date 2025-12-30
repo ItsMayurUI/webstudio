@@ -28,7 +28,7 @@ export class PortfolioComponent implements OnInit {
       title: 'Sadguru Constructions',
       desc: 'Responsive Website For a Builder who delivering quality home.',
       image: 'assets/projects/sadguru/homepage.png',
-      link: 'https://singular-cocada-303140.netlify.app/'
+      link: 'https://sadgurubuilders.netlify.app/'
     },
     {
       title: 'Interior Design and craft by SK',
