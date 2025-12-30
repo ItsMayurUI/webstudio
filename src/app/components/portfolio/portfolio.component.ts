@@ -34,7 +34,7 @@ export class PortfolioComponent implements OnInit {
       title: 'Interior Design and craft by SK',
       desc: 'Online Store With Product Catalog, Cart, and Checkout System.',
       image: 'assets/projects/kotecha/body/cover.png',
-      link: 'https://yourliveprojectlink.com'
+      link: 'https://craftbysk.netlify.app/'
     },
     {
       title: 'Croma Authorised Center',
