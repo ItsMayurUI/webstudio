@@ -25,10 +25,10 @@ export class PortfolioComponent implements OnInit {
 
   projects = [
     {
-      title: 'Sadguru Constructions',
-      desc: 'Responsive Website For a Builder who delivering quality home.',
-      image: 'assets/projects/sadguru/homepage.png',
-      link: 'https://sadgurubuilders.netlify.app/'
+      title: 'Raghav Veg',
+      desc: 'Responsive Website For a hotel who delivering quality dishes & aminities.',
+      image: 'assets/projects/raghavveg/cover.webp',
+      link: 'https://raghavpureveg.netlify.app/'
     },
     {
       title: 'Interior Design and craft by SK',
@@ -41,6 +41,12 @@ export class PortfolioComponent implements OnInit {
       desc: 'Clean & minimal shop website to showcase my work.',
       image: 'assets/projects/sai/cover.jpg',
       link: 'https://mayurnirkhe.in/'
+    },
+    {
+      title: 'Sadguru Constructions',
+      desc: 'Responsive Website For a Builder who delivering quality home.',
+      image: 'assets/projects/sadguru/homepage.png',
+      link: 'https://sadgurubuilders.netlify.app/'
     },
   ];
 
