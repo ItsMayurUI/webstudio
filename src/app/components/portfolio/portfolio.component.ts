@@ -37,10 +37,10 @@ export class PortfolioComponent implements OnInit {
       link: 'https://craftbysk.netlify.app/'
     },
     {
-      title: 'Croma Authorised Center',
-      desc: 'Clean & minimal shop website to showcase my work.',
-      image: 'assets/projects/sai/cover.jpg',
-      link: 'https://mayurnirkhe.in/'
+      title: 'Solar Pro',
+      desc: 'Clean & minimal shop website to showcase Solar website.',
+      image: 'assets/projects/solarpro/solar1.webp',
+      link: 'https://raghavsolar.netlify.app/'
     },
     {
       title: 'Sadguru Constructions',
