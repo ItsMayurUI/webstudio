@@ -1,21 +1,63 @@
-<section>
-  <h2>Portfolio</h2>
+<!-- -------------------new -->
+ <section class="portfolio" id="portfolio">
+  <h2 class="section-title">Portfolio</h2>
 
   <div class="portfolio-container">
-    <div class="project-card" *ngFor="let project of projects">
-      
-      <img [src]="project.image" [alt]="project.title">
+    <article
+      class="project-card reveal" *ngFor="let project of projects"
+    >
+      <!-- Image Wrapper -->
+      <div class="project-image">
+        <img
+          [src]="project.image"
+          [alt]="project.title"
+          loading="lazy"
+        />
+      </div>
 
-      <h3>{{ project.title }}</h3>
-      <p>{{ project.desc }}</p>
+      <!-- Content -->
+      <div class="project-content">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.desc }}</p>
 
-      <a
-        [href]="project.link"
-        target="_blank"
-        class="btn primary"
-      >
-        🔗 View Project
-      </a>
-    </div>
+        <!-- tech stack badges -->
+         <!-- <div class="tech-stack">
+          <span *ngFor="let tech of project.tech">
+            {{ tech }}
+          </span>
+        </div> -->
+
+        <button class="btn primary" (click)="openModal(project)">
+          👁 View Details
+        </button>
+      </div>
+    </article>
   </div>
 </section>
+
+<!-- ------------------- -->
+
+<div class="modal-backdrop" *ngIf="selectedProject">
+  <div class="modal">
+    <button class="close" (click)="closeModal()">×</button>
+
+    <h3>{{ selectedProject.title }}</h3>
+    <p>{{ selectedProject.desc }}</p>
+
+    <div class="tech-stack">
+      <span *ngFor="let tech of selectedProject.tech">
+        {{ tech }}
+      </span>
+    </div>
+
+    <a
+      class="btn secondary"
+      [routerLink]="['/project', selectedProject.slug]"
+      (click)="closeModal()"
+      >
+      📄 View Case Study
+      </a>
+
+  </div>
+</div>
+

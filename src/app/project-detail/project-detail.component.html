@@ -1,0 +1,51 @@
+<section class="case-study" *ngIf="project">
+
+  <!-- Back Button -->
+  <button class="back-btn" (click)="goBack()">
+    ← Back to Portfolio
+  </button>
+
+  <!-- Hero Image -->
+  <img
+    class="hero-img"
+    [src]="project.image"
+    [alt]="project.title"
+  />
+
+  <h1>{{ project.title }}</h1>
+
+  <!-- Overview -->
+  <div class="card">
+    <h3>Project Overview</h3>
+    <p>{{ project.desc }}</p>
+  </div>
+
+  <!-- Tech Stack -->
+  <div class="card">
+    <h3>Tech Stack</h3>
+
+    <div class="tech-logos">
+      <div
+        class="tech"
+        *ngFor="let tech of project.tech"
+      >
+        <img
+          [src]="'assets/tech/' + tech.toLowerCase() + '.svg'"
+          [alt]="tech"
+        />
+        <span>{{ tech }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <div class="card">
+    <h3>Key Features</h3>
+    <ul>
+      <li *ngFor="let feature of project.features">
+        ✔ {{ feature }}
+      </li>
+    </ul>
+  </div>
+
+</section>

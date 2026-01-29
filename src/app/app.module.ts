@@ -11,6 +11,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
     ContactComponent,
     NavbarComponent,
     FooterComponent,
-    ScrollTopComponent
+    ScrollTopComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
