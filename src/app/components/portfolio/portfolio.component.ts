@@ -26,26 +26,32 @@ export class PortfolioComponent implements OnInit {
   projects = [
     {
       title: 'Raghav Veg',
-      desc: 'Responsive Website For a hotel who delivering quality dishes & aminities.',
-      image: 'assets/projects/raghavveg/cover.webp',
+      desc: 'Angular-based restaurant platform with digital menu and order flow.',
+      image: 'assets/projects/raghavveg/cover1.webp',
       link: 'https://raghavpureveg.netlify.app/'
     },
     {
+      title: 'Raghav Fitness',
+      desc: 'Angular web app for gym, performance insights and analytics.',
+      image: 'assets/projects/raghavfitness/cover1.webp',
+      link: 'https://raghavfitness.netlify.app/'
+    },
+    {
       title: 'Interior Design and craft by SK',
-      desc: 'Online Store With Product Catalog, Cart, and Checkout System.',
-      image: 'assets/projects/kotecha/body/cover.png',
+      desc: 'A high-conversion portfolio website designed to showcase creativity and attract clients.',
+      image: 'assets/projects/kotecha/cover1.webp',
       link: 'https://craftbysk.netlify.app/'
     },
     {
       title: 'Solar Pro',
-      desc: 'Clean & minimal shop website to showcase Solar website.',
-      image: 'assets/projects/solarpro/solar1.webp',
+      desc: 'SEO-friendly Angular website for solar installation businesses.',
+      image: 'assets/projects/solarpro/cover1.webp',
       link: 'https://raghavsolar.netlify.app/'
     },
     {
       title: 'Sadguru Constructions',
-      desc: 'Responsive Website For a Builder who delivering quality home.',
-      image: 'assets/projects/sadguru/homepage.png',
+      desc: 'Responsive real-estate website with optimized property showcase.',
+      image: 'assets/projects/sadguru/cover1.webp',
       link: 'https://sadgurubuilders.netlify.app/'
     },
   ];
