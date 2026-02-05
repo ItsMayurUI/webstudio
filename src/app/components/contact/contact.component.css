@@ -41,6 +41,11 @@
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 6px;
+
+  background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7, #F4B342);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 
 .tagline {

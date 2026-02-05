@@ -87,6 +87,11 @@
         font-size: 2.4rem; 
         margin: 4px 0 6px; 
         font-weight: 700;
+
+        background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7, #F4B342);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 
 .about-content h3{

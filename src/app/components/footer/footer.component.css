@@ -24,29 +24,65 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 22px;
   margin-bottom: 18px;
 }
 
 .social-links a {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #00bfff;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.25s ease;
 }
 
-.social-links a:hover {
-  background: rgba(0, 191, 255, 0.2);
-  box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
-  transform: translateY(-3px);
+/* =========================
+   BRAND COLORS (ORIGINAL)
+========================= */
+
+.social-links i.fa-linkedin {
+  color: #0A66C2;
 }
+
+.social-links i.fa-github {
+  color: #ffffff;
+}
+
+.social-links i.fa-instagram {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.social-links i.fa-youtube {
+  color: #FF0000;
+}
+
+.social-links i.fa-whatsapp {
+  color: #25D366;
+}
+
+/* =========================
+   HOVER EFFECT (CLEAN)
+========================= */
+
+.social-links a:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+/* Soft brand glow on hover */
+.social-links a:hover i {
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
 
 .copyright {
   font-size: 0.85rem;
