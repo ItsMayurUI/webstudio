@@ -333,9 +333,9 @@
 }
 
 .btn.ghost:hover {
-      border-color: #00ffff;
-      color: #00ffff;
-      box-shadow: 0 0 18px rgba(0, 255, 255, 0.4);
+      border-color: #ff5100;
+      color: #fc7b3f;
+      box-shadow: 0 0 18px rgba(255, 255, 255, 0.4);
       transform: translateY(-2px);
 }
 
@@ -492,23 +492,28 @@
 
 /* Text */
 .hero-text h1 {
-  font-size: 46px;
+  text-align: left;
+  max-width: 640px;
+  font-size: 40px;
   line-height: 1.2;
   margin-bottom: 20px;
 }
 
 .hero-text h1 span {
-  background: linear-gradient(135deg, #4f7cff, #a78bfa);
+  background: linear-gradient(135deg, #360185, #8F0177, #DE1A58, #F4B342);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero-text p {
+  text-align: left;
   font-size: 18px;
   max-width: 520px;
   color: #c3cad4;
   margin-bottom: 32px;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
 }
 
 /* Buttons */
