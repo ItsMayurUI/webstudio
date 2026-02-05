@@ -208,7 +208,7 @@
       border:1px solid rgba(255,255,255,.12);
       display:block; transition:transform .25s ease, 
       box-shadow .25s ease;
-      border: 2px solid #fff;
+      /* border: 1px solid #fff; */
 }
 
 .work-card .thumb {
@@ -333,8 +333,8 @@
 }
 
 .btn.ghost:hover {
-      border-color: #ff5100;
-      color: #fc7b3f;
+      border-color: #33c0eb;
+      color: #33c0eb;
       box-shadow: 0 0 18px rgba(255, 255, 255, 0.4);
       transform: translateY(-2px);
 }
