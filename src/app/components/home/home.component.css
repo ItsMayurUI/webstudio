@@ -239,7 +239,7 @@
       border:1px solid rgba(255,255,255,.12);
       border-radius:12px; 
       padding:16px; 
-      border: 2px solid #fff; 
+      /* border: 2px solid #fff; */
 }
 
 .step span {
@@ -248,7 +248,7 @@
       width:28px; 
       height:28px; 
       border-radius:50%;
-      background: rgba(0,191,255,.24); 
+      background: rgb(252, 80, 0); 
       border:1px solid rgba(0,191,255,.4); 
       margin-bottom:8px; font-weight:700; 
 }
