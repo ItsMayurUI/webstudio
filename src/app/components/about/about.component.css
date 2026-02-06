@@ -391,12 +391,12 @@
 
   /* Text wrapping FIX (THIS IS KEY) */
   .about-content p,
-  .about-content h2,
+  .about-content,
   .about-content h3 {
     max-width: 100%;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    text-align: center;
+    text-align: left;
   }
 
   /* Image must not push layout */
