@@ -240,6 +240,19 @@
   transition:
     transform 0.35s cubic-bezier(.4,0,.2,1),
     opacity 0.25s ease;
+    background: linear-gradient(
+    135deg,
+    #4f7cff,
+    #a78bfa
+  );
+}
+
+.hamburger.open span {
+  background: linear-gradient(
+    135deg,
+    #22c55e,
+    #16b364
+  );
 }
 
 .hamburger.open span:nth-child(1) {
