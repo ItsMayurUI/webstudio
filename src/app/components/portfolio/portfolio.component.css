@@ -1,3 +1,10 @@
+.section-title{
+        background: linear-gradient(90deg, #7b4dff, #c65af6, #ff8a3d, #F4B342);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

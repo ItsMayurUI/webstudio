@@ -15,8 +15,7 @@
   margin-bottom: 50px;
   font-weight:700;
 
-  /* background: linear-gradient(135deg, #ffffff, #e70738); */
-  background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7, #F4B342);
+  background: linear-gradient(90deg, #7b4dff, #c65af6, #ff8a3d, #F4B342);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -375,7 +374,8 @@
       place-items:center; 
       overflow:hidden;
       min-height: 64vh; 
-      padding: 60px 18px; color:#fff;
+      padding: 60px 18px;
+      color:#fff;
       background: linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.7)),
       var(--bg) center/cover no-repeat #000;
 }
@@ -506,7 +506,7 @@
 }
 
 .hero-text h1 span {
-  background: linear-gradient(135deg, #360185, #8F0177, #DE1A58, #F4B342);
+  background: linear-gradient(135deg,#ffffff, #0a9634, #ffffff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
