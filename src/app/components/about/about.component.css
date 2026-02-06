@@ -216,3 +216,100 @@
         .about-stats{ grid-template-columns: 1fr 1fr; }
         .about-content h2{ font-size: 2rem; }
 }
+
+/* ==================================
+   ABOUT SECTION – MOBILE FIX
+   (No desktop impact)
+================================== */
+
+@media (max-width: 768px) {
+
+  .about-split {
+    padding: 50px 14px;
+  }
+
+  .about-card {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  /* Center media properly */
+  .about-media img {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .about-media {
+    text-align: center;
+  }
+
+  /* Headings */
+  .about-content h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .about-content h3 {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  /* Paragraphs */
+  .about-content p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    text-align: center;
+  }
+
+  /* Stats cards */
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .about-stats div {
+    padding: 12px;
+  }
+
+  .about-stats span {
+    font-size: 1.2rem;
+  }
+
+  /* Skills chips */
+  .about-skills {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .about-skills li {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  /* CTA buttons */
+  .about-cta {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .about-cta .btn {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 420px) {
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content h2 {
+    font-size: 1.6rem;
+  }
+}
