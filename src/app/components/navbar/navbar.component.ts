@@ -7,18 +7,19 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+
   menuOpen = false;
   isScrolled = false;
   isHidden = false;
   lastScrollY = 0;
 
   constructor(private router: Router) {
-  this.router.events.subscribe(event => {
-    if (event instanceof NavigationEnd) {
-      this.menuOpen = false;
-    }
-  });
-}
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.menuOpen = false;
+      }
+    });
+  } // ✅ constructor properly closed
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -32,6 +33,11 @@ export class NavbarComponent {
   onScroll() {
     const currentScrollY = window.scrollY;
     const isMobile = window.innerWidth <= 768;
+
+    /* ✅ AUTO-CLOSE MENU ON SCROLL (MOBILE ONLY) */
+    if (isMobile && this.menuOpen) {
+      this.menuOpen = false;
+    }
 
     // shadow effect (all devices)
     this.isScrolled = currentScrollY > 10;
