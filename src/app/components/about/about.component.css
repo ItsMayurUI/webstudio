@@ -1,4 +1,17 @@
 /* Section background + subtle glow */
+.about-doodle {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+
+  margin: 0 auto;
+  object-fit: contain;
+
+  /* 🔑 MOST IMPORTANT */
+  box-sizing: border-box;
+}
+
 .about-split {
         position: relative;
         padding: 80px 20px;
@@ -313,3 +326,91 @@
     font-size: 1.6rem;
   }
 }
+
+/* ===============================
+   ABOUT – MICRO MOBILE ALIGN FIX
+================================ */
+
+@media (max-width: 768px) {
+
+  /* Kill any sub-pixel shifts */
+  .about-card {
+    margin-left: auto;
+    margin-right: auto;
+    transform: none !important;
+  }
+
+  /* Ensure grid items are centered */
+  .about-card > * {
+    align-self: center;
+  }
+
+  /* Text container nudge */
+  .about-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Fix tiny horizontal drift */
+  .about-split {
+    overflow-x: hidden;
+  }
+}
+
+/* ==================================
+   ABOUT – FINAL MOBILE OVERFLOW FIX
+================================== */
+
+@media (max-width: 768px) {
+
+  /* Hard stop horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .about-split {
+    overflow-x: hidden;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* Card must never exceed viewport */
+  .about-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* Content container fix */
+  .about-content {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Text wrapping FIX (THIS IS KEY) */
+  .about-content p,
+  .about-content h2,
+  .about-content h3 {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+
+  /* Image must not push layout */
+  .about-media img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-doodle {
+    max-width: 280px;   /* prevent overflow */
+  }
+}
+
