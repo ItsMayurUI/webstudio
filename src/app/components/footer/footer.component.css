@@ -1,92 +1,147 @@
-.site-footer {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 40px 20px 25px;
-  color: #fff;
-  text-align: center;
+.cinematic-footer {
   position: relative;
+  height: 90vh;
+  color: #fff;
+  overflow: hidden;
 }
 
-.footer-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 6px;
+/* background image */
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.3)
+    ),
+    url("/assets/images/footer-bg.jpg") center/cover no-repeat;
+  z-index: 0;
 }
 
-.footer-tagline {
-  font-size: 0.95rem;
-  color: #bfcad3;
-  margin-bottom: 18px;
+/* glass panel */
+.footer-glass {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+
+  padding: 60px;
+  background: rgba(255,255,255,0.08);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,0.15);
 }
 
-.social-links {
+/* LEFT */
+.footer-left h2 {
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.footer-contact p {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 22px;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: #ddd;
+}
+
+.footer-contact i {
+  color: #0b66dd;
+}
+
+/* CENTER + RIGHT */
+.footer-center h4,
+.footer-right h4 {
   margin-bottom: 18px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaa;
 }
 
-.social-links a {
-  display: inline-flex;
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-center li {
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: #eee;
+}
+
+.footer-center li:hover {
+  color: #0b66dd;
+}
+
+/* SOCIALS */
+.footer-socials {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  text-decoration: none;
-  transition: transform 0.25s ease;
+
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* =========================
-   BRAND COLORS (ORIGINAL)
-========================= */
-
-.social-links i.fa-linkedin {
-  color: #0A66C2;
+.footer-socials a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px #0b66dd;
 }
 
-.social-links i.fa-github {
-  color: #ffffff;
-}
-
-.social-links i.fa-instagram {
-  background: linear-gradient(
-    45deg,
-    #feda75,
-    #fa7e1e,
-    #d62976,
-    #962fbf,
-    #4f5bd5
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.social-links i.fa-youtube {
-  color: #FF0000;
-}
-
-.social-links i.fa-whatsapp {
-  color: #25D366;
-}
-
-/* /* =========================
-   HOVER EFFECT (CLEAN)
-========================= */
-
-.social-links a:hover {
-  transform: translateY(-3px) scale(1.1);
-}
-
-/* Soft brand glow on hover */
-/* .social-links a:hover i {
-  filter: drop-shadow(0 0 6px currentColor);
-} */
-
-
-.copyright {
-  font-size: 0.85rem;
+/* COPYRIGHT */
+.footer-copy {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
   color: #aaa;
-  margin-top: 15px;
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
+  .cinematic-footer {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .footer-glass {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px;
+    transform: none;
+    top: 0;
+  }
+
+  .footer-left h2 {
+    font-size: 32px;
+  }
+
+  .footer-copy {
+    position: static;
+    margin-top: 30px;
+  }
+}
