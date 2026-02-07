@@ -488,11 +488,11 @@
   justify-content: space-between;
   gap: 50px;
 
-  background: rgba(255, 255, 255, 0.25);
+  /* background: rgba(255, 255, 255, 0.25); */
   -webkit-backdrop-filter: blur(20px) ;
   backdrop-filter: blur(20px);
   border-radius: 28px;
-  border: 1px solid rgba(255,255,255,0.3);
+  /* border: 1px solid rgba(255,255,255,0.3); */
   box-shadow: 0 20px 60px rgba(0,0,0,0.08);
 }
 
@@ -607,16 +607,17 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
   align-items: center;
+  background: none;
 }
 
 .service-card {
   text-align: left;
   padding: 28px 22px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.08);
+  background: rgba(236, 8, 8, 0.08);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  border: 0.5px solid rgba(255, 255, 255, 0.616);
+  border: 0.5px solid rgb(106, 139, 231);
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
   transition: 0.3s ease;
   color: #ffffff;

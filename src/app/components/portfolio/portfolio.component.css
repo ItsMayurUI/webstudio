@@ -118,14 +118,16 @@
     overflow-x: auto;
     overflow-y: hidden;
     padding: 24px 20px;
-    gap: px;
+    gap: 20px;
 
-    scroll-behavior: smooth;
-    overscroll-behavior-x: contain;
+    /* Safari / iOS smooth scroll */
+    -webkit-overflow-scrolling: touch;
 
+    /* Firefox */
     scrollbar-width: none;
   }
 
+  /* Chrome, Safari, Edge */
   .dock::-webkit-scrollbar {
     display: none;
   }
@@ -136,8 +138,7 @@
 }
 
 
-
-
+/* --------------- */
 .section-title{
         background: linear-gradient(90deg, #7b4dff, #c65af6, #ff8a3d, #F4B342);
         -webkit-background-clip: text;
