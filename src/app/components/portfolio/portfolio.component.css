@@ -1,141 +1,62 @@
-/* dock animation */
-/* SECTION */
-.skills-dock-section {
-  background: #000;
-  padding: 120px 20px;
-  text-align: center;
-}
-
-/* TITLE */
-.power-title {
-  font-size: 44px;
-  font-weight: 600;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #fff;
-  opacity: 0.9;
-  margin-bottom: 60px;
-  position: relative;
-}
-
-/* thin underline */
-.power-title::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -14px;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 1px;
-  background: rgba(255,255,255,0.4);
-}
-
-
-/* DOCK */
-.dock {
+/* ===== SKILLS DOCK ===== */
+.skills-dock {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  gap:0;
-  padding: 30px 40px;
-  border-radius: 40px;
-  /* background: rgba(255, 255, 255, 0.04); */
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-}
-
-/* ITEM */
-.dock-item {
-  width: 90px;
-  height: 90px;
-  /* background: #0b0b0b; */
+  gap: 18px;
+  padding: 18px 26px;
   border-radius: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* background: rgba(255, 255, 255, 0.06); */
+  /* backdrop-filter: blur(14px); */
+  /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); */
+}
+
+/* ===== ICON ITEM ===== */
+.dock-item {
   position: relative;
-  cursor: pointer;
-
-  transition:
-    transform 0.35s cubic-bezier(0.25, 1.6, 0.5, 1),
-    box-shadow 0.35s ease;
+  width: 54px;
+  height: 54px;
+  transition: transform 0.35s ease;
 }
 
-/* LOGO */
 .dock-item img {
-  width: 38px;
-  height: 38px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 0 6px rgba(255,255,255,0.15));
-  transition: filter 0.35s ease, transform 0.35s ease;
+  filter: drop-shadow(0 8px 18px rgba(120, 80, 255, 0.4));
 }
 
-/* LABEL */
+/* Hover zoom */
+.skills-dock:hover .dock-item {
+  transform: scale(0.85);
+}
+
+.skills-dock .dock-item:hover {
+  transform: scale(1.35) translateY(-10px);
+  z-index: 2;
+}
+
+/* ===== TOOLTIP ===== */
 .dock-item span {
   position: absolute;
-  bottom: -32px;
-  font-size: 12px;
-  color: #ccc;
+  bottom: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 999px;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  pointer-events: none;
+  transition: 0.25s ease;
+  white-space: nowrap;
 }
-
-/* MAIN HOVER (CENTER ICON) */
-.dock-item:hover {
-  transform: scale(1.65) translateY(-18px);
-  /* box-shadow:
-    0 20px 40px rgba(255, 95, 162, 0.45),
-    0 0 25px rgba(255, 95, 162, 0.5); */
-}
-
-/* .dock-item:hover img {
-  filter:
-    drop-shadow(0 0 12px rgba(255, 95, 162, 0.7))
-    drop-shadow(0 0 24px rgba(255, 95, 162, 0.4));
-} */
 
 .dock-item:hover span {
   opacity: 1;
 }
 
-/* NEIGHBOR EFFECT (MAC DOCK) */
-.dock-item:hover + .dock-item,
-.dock-item:has(+ .dock-item:hover) {
-  transform: scale(1.25) translateY(-8px);
-}
-
-/* FEATURE SKILL (ANGULAR) */
-.main-skill img {
-  width: 50px;
-  height: 50px;
-}
-
-/* FORCE MAC DOCK LAYOUT ON MOBILE */
-@media (max-width: 768px) {
-  .dock {
-    flex-wrap: nowrap !important;
-    justify-content: flex-start;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 24px 20px;
-    gap: 20px;
-
-    /* Safari / iOS smooth scroll */
-    -webkit-overflow-scrolling: touch;
-
-    /* Firefox */
-    scrollbar-width: none;
-  }
-
-  /* Chrome, Safari, Edge */
-  .dock::-webkit-scrollbar {
-    display: none;
-  }
-
-  .dock-item {
-    flex: 0 0 auto;
-  }
-}
 
 /* new update ui css */
 .portfolio-section {
@@ -266,5 +187,6 @@
     max-width: 90%;
   }
 }
+
 
 
