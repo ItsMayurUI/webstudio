@@ -34,36 +34,37 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {}
 
   // ✅ When user submits the form
-  onSubmit(form: NgForm): void {
-    if (!form.valid) {
-      alert('Please fill all required fields before submitting.');
-      return;
-    }
+ onSubmit(form: NgForm): void {
 
-    // Log & confirm
-    console.log('Quote Request Submitted:', this.formData);
-    alert(`Thank you ${this.formData.name}! We'll contact you soon with your quote.`);
-
-    // Open WhatsApp automatically with pre-filled message
-    this.openWhatsApp(this.formData);
-
-    // Optionally reset the form
-    form.resetForm();
+  if (form.invalid) {
+    alert('Please fill all fields correctly before submitting.');
+    return;
   }
+
+  const data = { ...form.value };
+
+  this.openWhatsApp(data);
+
+  form.resetForm();
+}
+
 
   // ✅ Opens WhatsApp with user’s details
-  openWhatsApp(v: ContactFormData): void {
-    const text = `
-🧾 New Quote Request
-👤 Name: ${v.name}
-📧 Email: ${v.email}
-📞 Phone: ${v.phone}
-💼 Project Type: ${v.projectType}
-💬 Message: ${v.message || ''}
-    `;
-    const url = `https://wa.me/${this.myWhatsApp}?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank');
-  }
+ openWhatsApp(v: ContactFormData): void {
+  const message =
+    'New Quote Request\n\n' +
+    'Name → ' + v.name + '\n' +
+    'Email → ' + v.email + '\n' +
+    'Phone → ' + v.phone + '\n' +
+    'Project Type → ' + v.projectType + '\n\n' +
+    'Message\n' +
+    (v.message?.trim() || 'N/A');
+
+  const url =
+    `https://api.whatsapp.com/send?phone=${this.myWhatsApp}&text=${encodeURIComponent(message)}`;
+
+  window.open(url, '_blank');
+}
 
   // ✅ Generates a mailto link for direct email
   mailtoHref(v: ContactFormData): string {
