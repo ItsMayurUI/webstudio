@@ -52,6 +52,7 @@
   color: #d5d5d5;
   line-height: 1.7;
   margin-bottom: 16px;
+  text-align: left;
 }
 
 .highlight {
@@ -64,6 +65,7 @@
   display: flex;
   gap: 25px;
   margin: 30px 0;
+  justify-content: center;
 }
 
 .about-stats div {
@@ -104,6 +106,7 @@
 .about-actions {
   display: flex;
   gap: 18px;
+  justify-content: center;
 }
 
 .btn {
@@ -112,11 +115,12 @@
   border: none;
   cursor: pointer;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .btn.primary {
   background: linear-gradient(135deg, #b86bff, #ff7a6b);
-  color: #000;
+  color: #ffffff;
 }
 
 .btn.secondary {

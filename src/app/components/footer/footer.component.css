@@ -84,14 +84,20 @@
 }
 
 .footer-center li {
-  margin-bottom: 12px;
-  cursor: pointer;
-  color: #eee;
+ margin: 10px 0;
 }
 
-.footer-center li:hover {
+.footer-center a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-center a:hover,
+.footer-center a.active {
   color: #77f059;
 }
+
 
 /* SOCIALS */
 .footer-socials {
