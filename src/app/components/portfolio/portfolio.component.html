@@ -40,67 +40,96 @@
   </div>
 </section>
 
+<!-- New update ui -->
+ <section class="portfolio-section" id="portfolio">
+  <div class="container">
 
-<!--new -->
- <section class="portfolio" id="portfolio">
-  <h2 class="section-title">Portfolio</h2>
-
-  <div class="portfolio-container">
-    <article
-      class="project-card reveal" *ngFor="let project of projects"
-    >
-      <!-- Image Wrapper -->
-      <div class="project-image">
-        <img
-          [src]="project.image"
-          [alt]="project.title"
-          loading="lazy"
-        />
-      </div>
-
-      <!-- Content -->
-      <div class="project-content">
-        <h3>{{ project.title }}</h3>
-        <p>{{ project.desc }}</p>
-
-        <!-- tech stack badges -->
-         <!-- <div class="tech-stack">
-          <span *ngFor="let tech of project.tech">
-            {{ tech }}
-          </span>
-        </div> -->
-
-        <button class="btn primary" (click)="openModal(project)">
-          👁 View Details
-        </button>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- ------------------- -->
-
-<div class="modal-backdrop" *ngIf="selectedProject">
-  <div class="modal">
-    <button class="close" (click)="closeModal()">×</button>
-
-    <h3>{{ selectedProject.title }}</h3>
-    <p>{{ selectedProject.desc }}</p>
-
-    <div class="tech-stack">
-      <span *ngFor="let tech of selectedProject.tech">
-        {{ tech }}
-      </span>
+    <div class="portfolio-header">
+      <span class="section-tag">PORTFOLIO</span>
+      <h2 class="section-title">My Works</h2>
+      <p class="section-subtitle">
+        A selection of projects crafted with performance, clarity, and purpose.
+      </p>
     </div>
 
-    <a
-      class="btn secondary"
-      [routerLink]="['/project', selectedProject.slug]"
-      (click)="closeModal()"
-      >
-      📄 View Case Study
+    <!-- Filters
+    <div class="portfolio-filters">
+      <button class="active">All</button>
+      <button>Business Websites</button>
+      <button>Web Applications</button>
+      <button>Angular Projects</button>
+      <button>UI / Dashboards</button>
+    </div> -->
+
+    <!-- Projects Grid -->
+    <div class="portfolio-grid">
+
+      <!-- Card 1 -->
+      <a href="https://raghavpureveg.netlify.app/" target="_blank" class="work-card">
+        <img src="assets/projects/raghavveg/cover1.webp" alt="Raghav Pure Veg">
+        <div class="overlay">
+          <!-- <h3>Raghav Pure Veg</h3> -->
+          <span>Restaurant Management Web App</span>
+          <p>
+            Angular-based platform with digital menu, order flow, and smart restaurant operations.
+          </p>
+          <span class="view-btn">Live Preview →</span>
+        </div>
       </a>
 
+      <!-- Card 2 -->
+      <a href="https://raghavfitness.netlify.app/" target="_blank" class="work-card">
+        <img src="assets/projects/raghavfitness/cover.webp" alt="Raghav Fitness">
+        <div class="overlay">
+          <!-- <h3>Raghav Fitness</h3> -->
+          <span>Fitness & Gym Web Application</span>
+          <p>
+            Performance-focused Angular web app for gym management, insights, and analytics.
+          </p>
+          <span class="view-btn">Live Preview →</span>
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="https://raghavsolar.netlify.app/" target="_blank" class="work-card">
+        <img src="assets/projects/solarpro/solar1.webp" alt="Solar Pro">
+        <div class="overlay">
+          <!-- <h3>Solar Pro</h3> -->
+          <span>Solar Business Website</span>
+          <p>
+            SEO-friendly Angular website designed for solar installation businesses.
+          </p>
+          <span class="view-btn">Live Preview →</span>
+        </div>
+      </a>
+
+      <!-- Card 4 -->
+      <a href="https://craftbysk.netlify.app/" target="_blank" class="work-card">
+        <img src="assets/projects/kotecha/cover.webp" alt="Craft By SK">
+        <div class="overlay">
+          <!-- <h3>Craft By SK</h3> -->
+          <span>Creative Brand Website</span>
+          <p>
+            Minimal portfolio website showcasing handmade products and brand identity.
+          </p>
+          <span class="view-btn">Live Preview →</span>
+        </div>
+      </a>
+
+      <!-- Card 5 -->
+      <a href="https://sadgurubuilders.netlify.app/" target="_blank" class="work-card">
+        <img src="assets/projects/sadguru/cover2.webp" alt="Manish Real Estate">
+        <div class="overlay">
+          <!-- <h3>Manish</h3> -->
+          <span>Real Estate Business Website</span>
+          <p>
+            Trust-driven property website with modern layout and clear client communication.
+          </p>
+          <span class="view-btn">Live Preview →</span>
+        </div>
+      </a>
+
+    </div>
   </div>
-</div>
+</section>
 
