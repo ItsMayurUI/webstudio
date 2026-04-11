@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
 
-  constructor() { }
+  myWhatsApp = '919356219205';
 
-  ngOnInit(): void {
-  }
+  whatsappMessage = 'Hello Mayur, I saw your website and want to discuss a new project.';
+
+  whatsappLink =
+    `https://wa.me/${this.myWhatsApp}?text=${encodeURIComponent(this.whatsappMessage)}`;
 
 }

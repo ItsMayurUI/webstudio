@@ -20,6 +20,9 @@ export class ContactComponent implements OnInit {
   myWhatsApp = '919356219205'; // Your WhatsApp number (country code + number, no +)
   myEmail = 'studio@mayurnirkhe.in';
 
+  whatsappMessage = 'Hello Mayur, I saw your website and want to discuss a new project.';
+  whatsappLink = `https://wa.me/${this.myWhatsApp}?text=${encodeURIComponent(this.whatsappMessage)}`;
+
   // ✅ Form data model
   formData: ContactFormData = {
     name: '',
