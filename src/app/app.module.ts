@@ -12,6 +12,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ScrollTopComponent } from './components/scroll-top/scroll-top.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { WebDesignerBhusawalComponent } from './web-designer-bhusawal/web-designer-bhusawal.component';
+import { WebDesignerPuneComponent } from './web-designer-pune/web-designer-pune.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
     NavbarComponent,
     FooterComponent,
     ScrollTopComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    WebDesignerBhusawalComponent,
+    WebDesignerPuneComponent
   ],
   imports: [
     BrowserModule,

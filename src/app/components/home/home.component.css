@@ -13,21 +13,47 @@ body {
 }
 
 /* ================= BILLBOARD SECTION ================= */
-
+/* HERO SECTION FIX */
 .billboard {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 20px;
+  position: relative;
 }
 
-.billboard-text {
-  font-size: clamp(4rem, 12vw, 10rem);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -3px;
+/* TEXT BELOW HERO */
+.hero-location {
+  margin-top: 24px;
+}
+
+/* SMALL TEXT */
+.hero-location p {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.5px;
+}
+
+/* CTA BUTTON */
+.hero-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #8b5cf6;
+  border-radius: 6px;
+
+  color: #8b5cf6;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.hero-link:hover {
+  background: #8b5cf6;
+  color: #fff;
+}
+.hero-link {
+  border-radius: 999px; /* pill style */
 }
 
 
@@ -353,5 +379,12 @@ section {
 
   .hero-metrics {
     gap: 20px;
+  }
+
+  .hero-location {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-top: 20px;
   }
 }

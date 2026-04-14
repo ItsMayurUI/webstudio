@@ -1,3 +1,5 @@
+import { WebDesignerBhusawalComponent } from './web-designer-bhusawal/web-designer-bhusawal.component';
+import { WebDesignerPuneComponent } from './web-designer-pune/web-designer-pune.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -14,7 +16,9 @@ const routes: Routes = [
   { path: 'services', component: ServicesComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'contact', component: ContactComponent },
-
+  {path: 'web-designer-bhusawal',component: WebDesignerBhusawalComponent},
+  {path: 'web-designer-pune',component: WebDesignerPuneComponent},
+  
   // ✅ Project case study page
   { path: 'project/:slug', component: ProjectDetailComponent },
 
