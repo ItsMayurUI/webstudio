@@ -15,9 +15,57 @@ body {
 /* ================= BILLBOARD SECTION ================= */
 /* HERO SECTION FIX */
 .billboard {
+  min-height: 90vh;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+}
+
+.billboard-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/images/studio-banner.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+}
+
+.billboard-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 15vh;
+}
+
+.billboard-content h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(100px, 20vw, 300px);
+  line-height: 0.8;
+  margin: 0;
+  letter-spacing: -8px;
+}
+
+.billboard-content p {
+  font-family: 'Bodoni Moda', serif;
+  font-size: clamp(24px, 3vw, 48px);
+  margin-top: 50px;
+}
+
+.billboard-content span {
+  letter-spacing: 8px;
+  font-size: 12px;
+}
+
+/* .billboard {
   text-align: center;
   position: relative;
 }
+
+.billboard-text {
+  font-family: "Le Jour Serif", serif;
+} */
+
 
 /* TEXT BELOW HERO */
 .hero-location {
@@ -36,10 +84,10 @@ body {
 .hero-link {
   display: inline-block;
   padding: 10px 20px;
-  border: 1px solid #8b5cf6;
+  border: 1px solid #fdfdfd;
   border-radius: 6px;
 
-  color: #8b5cf6;
+  color: #ffffff;
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
@@ -49,8 +97,9 @@ body {
 
 /* HOVER EFFECT */
 .hero-link:hover {
-  background: #8b5cf6;
+  background: #DC4D01;
   color: #fff;
+  border: #DC4D01;
 }
 .hero-link {
   border-radius: 999px; /* pill style */

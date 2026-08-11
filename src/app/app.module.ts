@@ -14,6 +14,7 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { WebDesignerBhusawalComponent } from './web-designer-bhusawal/web-designer-bhusawal.component';
 import { WebDesignerPuneComponent } from './web-designer-pune/web-designer-pune.component';
+import { StudioBannerComponent } from './components/studio-banner/studio-banner.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { WebDesignerPuneComponent } from './web-designer-pune/web-designer-pune.
     ScrollTopComponent,
     ProjectDetailComponent,
     WebDesignerBhusawalComponent,
-    WebDesignerPuneComponent
+    WebDesignerPuneComponent,
+    StudioBannerComponent
   ],
   imports: [
     BrowserModule,
