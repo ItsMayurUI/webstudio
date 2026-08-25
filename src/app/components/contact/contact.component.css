@@ -123,8 +123,8 @@ form {
   cursor: pointer;
   border: 0;
   border-radius: 16px;
-  background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
-  box-shadow: 0 10px 30px rgba(123, 92, 255, 0.35);
+  background: linear-gradient(135deg, #023bf8 0%, #023bf8 100%);
+  /* box-shadow: 0 10px 30px rgba(123, 92, 255, 0.35); */
   transition: transform 0.15s ease, box-shadow 0.2s ease;
   overflow: hidden;
 }
