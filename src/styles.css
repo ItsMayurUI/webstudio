@@ -98,3 +98,84 @@ body{background:var(--ref-black)!important;color:#f5f3f8!important;font-family:'
  .ref-contact{padding:95px 7vw 110px}
 }
 @media(max-width:430px){.ref-project-grid{grid-template-columns:1fr}.ref-project img{height:210px}.ref-project{min-height:250px}.ref-project-frame-top span:nth-child(2){display:none}}
+
+/* Safari text sizing fix */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Mobile typography refinement – iPhone 12 mini */
+@media (max-width: 400px) {
+  .ref-hero-copy {
+    width: 100%;
+    position: relative;
+    z-index: 4;
+  }
+
+  .ref-hero h1 {
+    font-size: 68px;
+    line-height: 0.92;
+    letter-spacing: -0.065em;
+    margin-bottom: 24px;
+  }
+
+  .ref-hero-desc {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 300px;
+    margin-top: 24px;
+  }
+
+  .ref-intro h2,
+  .ref-light-heading h2,
+  .ref-project-heading h2,
+  .ref-about h2,
+  .ref-contact h2 {
+    font-size: clamp(42px, 12vw, 54px);
+    line-height: 1.05;
+    letter-spacing: -0.055em;
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+
+  .ref-intro p,
+  .ref-project-heading p,
+  .ref-about-copy p,
+  .ref-contact p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .ref-service-row h3 {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .ref-service-row p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .ref-avatar-wrap {
+    z-index: 1;
+  }
+
+  .ref-intro,
+  .ref-services,
+  .ref-projects,
+  .ref-about {
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+}
