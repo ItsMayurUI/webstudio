@@ -1,0 +1,26 @@
+MAYUR NIRKHE — DARK CREATIVE PORTFOLIO UPDATE
+
+This update preserves your existing Angular 12 application, routes, project content,
+service packages, assets, contact form action, SEO landing pages, Netlify configuration,
+and the .git folder. It adds a unified dark black/purple visual layer, neon depth,
+avatar/orbit motion, card hover treatments and responsive refinements.
+
+IMPORTANT:
+- node_modules is intentionally excluded from this ZIP. Run npm install after extracting.
+- Keep this folder connected to your existing Git repository.
+- Do not change the Netlify site or domain settings.
+- Test locally before committing/pushing.
+
+Windows PowerShell:
+  npm install
+  npm start
+
+Your package.json start script already sets NODE_OPTIONS=--openssl-legacy-provider
+for the Angular 12 / webpack OpenSSL compatibility issue. Use `npm start`, not
+`npx ng serve` directly.
+
+Production build:
+  npm run build
+
+Review the home, About, Services, Portfolio, Contact, project detail and SEO pages
+on desktop and mobile before deploying.
