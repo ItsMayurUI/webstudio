@@ -18,16 +18,43 @@
     <span></span><span></span><span></span>
   </button>
 
-  <!-- Nav -->
-  <nav class="main-nav" [class.open]="menuOpen">
-    <ul>
-      <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
-      <li><a routerLink="/about" (click)="closeMenu()">About</a></li>
-      <li><a routerLink="/services" (click)="closeMenu()">Services</a></li>
-      <li><a routerLink="/portfolio" (click)="closeMenu()">Portfolio</a></li>
-      <li><a routerLink="/contact" (click)="closeMenu()">Contact</a></li>
-    </ul>
-  </nav>
+  
+<!-- Navigation -->
+<nav class="main-nav" [class.open]="menuOpen">
+  <ul>
+    <li>
+      <a routerLink="/" routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }"
+         (click)="closeMenu()">Home</a>
+    </li>
+
+    <li>
+      <a routerLink="/about" routerLinkActive="active"
+         (click)="closeMenu()">About</a>
+    </li>
+
+    <li>
+      <a routerLink="/services" routerLinkActive="active"
+         (click)="closeMenu()">Services</a>
+    </li>
+
+    <li>
+      <a routerLink="/portfolio" routerLinkActive="active"
+         (click)="closeMenu()">Portfolio</a>
+    </li>
+
+    <li>
+      <a routerLink="/websites" routerLinkActive="active"
+         (click)="closeMenu()">Websites</a>
+    </li>
+
+    <li>
+      <a routerLink="/contact" routerLinkActive="active"
+         (click)="closeMenu()">Contact</a>
+    </li>
+  </ul>
+</nav>
+
 
   <!-- Changes Blur / dim overlay -->
   <div class="nav-overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>

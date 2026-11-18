@@ -15,6 +15,7 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
 import { WebDesignerBhusawalComponent } from './web-designer-bhusawal/web-designer-bhusawal.component';
 import { WebDesignerPuneComponent } from './web-designer-pune/web-designer-pune.component';
 import { StudioBannerComponent } from './components/studio-banner/studio-banner.component';
+import { WebsiteComponent } from './components/website/website.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { StudioBannerComponent } from './components/studio-banner/studio-banner.
     ProjectDetailComponent,
     WebDesignerBhusawalComponent,
     WebDesignerPuneComponent,
-    StudioBannerComponent
+    StudioBannerComponent,
+    WebsiteComponent
   ],
   imports: [
     BrowserModule,

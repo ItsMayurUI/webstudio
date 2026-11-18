@@ -1,3 +1,4 @@
+import { WebsiteComponent } from './components/website/website.component';
 import { WebDesignerBhusawalComponent } from './web-designer-bhusawal/web-designer-bhusawal.component';
 import { WebDesignerPuneComponent } from './web-designer-pune/web-designer-pune.component';
 import { NgModule } from '@angular/core';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'portfolio', component: PortfolioComponent },
+  { path: 'websites', component: WebsiteComponent },
   { path: 'contact', component: ContactComponent },
   {path: 'web-designer-bhusawal',component: WebDesignerBhusawalComponent},
   {path: 'web-designer-pune',component: WebDesignerPuneComponent},

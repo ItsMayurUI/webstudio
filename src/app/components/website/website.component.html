@@ -1,0 +1,46 @@
+
+<section class="portfolio-section" id="websites">
+  <div class="container">
+
+    <div class="portfolio-header">
+      <span class="section-tag">WEB DEVELOPMENT</span>
+
+      <h2 class="section-title">
+        Websites & Applications
+      </h2>
+
+      <p class="section-subtitle">
+        Modern, responsive and powerful digital solutions
+        built to help businesses grow online.
+      </p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <a *ngFor="let project of projects"
+         [href]="project.url"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="work-card">
+
+        <img [src]="project.image"
+             [alt]="project.title">
+
+        <div class="overlay">
+
+          <span>{{ project.title }}</span>
+
+          <p>{{ project.desc }}</p>
+
+          <span class="view-btn">
+            Live Preview →
+          </span>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+</section>
